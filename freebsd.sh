@@ -12,6 +12,8 @@ read -p "Please select an option (1-4): " choice
 case $choice in
 1)
     echo "Installing Gnome..."
+    # Configure rc.conf
+    sysrc gdm_enable="YES" gnome_enable="YES"
     pkg install -y xorg
     pkg install -y gnome
     pkg install -y alsa-utils
@@ -20,18 +22,22 @@ case $choice in
 
 2)
     echo "Installing KDE..."
+    # Configure rc.conf
+    sysrc kdm4_enable="YES"
     pkg install -y xorg
-    pkg install -y  kde plasma5
+    pkg install -y  kde
     pkg install -y alsa-utils
     pkg install -y zip
     ;;
 
 3)
     echo "Installing i3wm..."
+    # Configure rc.conf
+    sysrc gdm_enable="YES" gnome_enable="YES"
     pkg install -y xorg
     pkg install -y i3 i3status i3lock dmenu i3-gaps
-    pkg install -y ant-dracula-theme-2.0
     pkg install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+    pkg install -y ant-dracula-theme-2.0
     pkg install -y lxappearance
     pkg install -y compton compton-conf
     pkg install -y arandr
