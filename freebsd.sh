@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "Welcome to FreeBSD Installation Menu"
 echo "1. Install Gnome"
