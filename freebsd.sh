@@ -61,7 +61,11 @@ case $video_choice in
     echo "Installing video drivers..."
     pkg install -y drm-kmod
     pkg install -y nvidia-driver-470
-    sysrc moused_enable="YES" dbus_enable="YES" hald_enable="YES" ntpd_enable="YES" kld_list="/boot/modules/i915kms.ko" kld_list="i915kms" lightdm_enable="YES" kld_list="nvidia" kld_list="linux nvidia" kld_list="nvidia-modeset" kld_modset_name="nvidia-modeset"
+    sysrc moused_enable="YES" dbus_enable="YES" hald_enable="YES" ntpd_enable="YES" kld_list="/boot/modules/i915kms.ko" kld_list="i915kms" kld_list="nvidia" kld_list="linux nvidia" kld_list="nvidia-modeset" kld_modset_name="nvidia-modeset"
+    # Boot-time kernel stuff
+    setconfig -f /boot/loader.conf kern.vty=vt
+    sysrc -f /boot/loader.conf fuse_load="YES" snd_driver_load="YES" cuse_load="YES"
+    setconfig -f /etc/sysctl.conf kern.coredump=0
     ;;
 [nN])
     echo "Skipping video driver installation."
