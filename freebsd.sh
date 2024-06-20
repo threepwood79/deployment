@@ -106,7 +106,7 @@ read -p "Installation complete. Would you like to reboot now? [y/N]: " reboot_ch
 case $reboot_choice in
 [yY])
     echo "Rebooting now..."
-    su reboot
+    reboot
     ;;
 
 [nN])
