@@ -11,17 +11,17 @@ read -p "Please select an option (1-4): " choice
 case $choice in
 1)
     echo "Installing Gnome..."
-    sudo pkg install gnome3
+    pkg install -y gnome
     ;;
 
 2)
     echo "Installing KDE..."
-    sudo pkg install kde plasma5
+    pkg install -y  kde plasma5
     ;;
 
 3)
     echo "Installing i3wm..."
-    sudo pkg install i3
+    pkg install -y  i3 i3status i3lock dmenu i3-gaps
     ;;
 
 4)
@@ -55,7 +55,8 @@ read -p "Do you need to install additional applications? [y/N]: " app_choice
 case $app_choice in
 [yY])
     echo "Installing Firefox and Chromium..."
-    sudo pkg install firefox chromium
+    pkg install -y firefox
+    pkg install -y chromium
     ;;
 
 [nN])
