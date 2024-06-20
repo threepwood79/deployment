@@ -39,7 +39,8 @@ read -p "Do you need to install Intel or Nvidia video drivers? [y/N]: " video_ch
 case $video_choice in
 [yY])
     echo "Installing video drivers..."
-    # Command to install video drivers
+    pkg install -y drm-kmod
+    pkg install -y nvidia-driver-470
     ;;
 [nN])
     echo "Skipping video driver installation."
