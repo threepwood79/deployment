@@ -1,5 +1,6 @@
 #!/bin/sh
 
+clear
 echo "Welcome to FreeBSD Installation Menu"
 echo "1. Install Gnome"
 echo "2. Install KDE"
@@ -36,6 +37,7 @@ case $choice in
     pkg install -y arandr
     pkg install -y volumeicon
     pkg install -y alsa-utils
+    pkg install -y pavucontrol
     pkg install -y nitrogen
     pkg install -y pcmanfm
     pkg install -y lxmenu-data
@@ -94,7 +96,7 @@ read -p "Installation complete. Would you like to reboot now? [y/N]: " reboot_ch
 case $reboot_choice in
 [yY])
     echo "Rebooting now..."
-    sudo reboot
+    su reboot
     ;;
 
 [nN])
