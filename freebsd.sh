@@ -13,12 +13,16 @@ case $choice in
     echo "Installing Gnome..."
     pkg install -y xorg
     pkg install -y gnome
+    pkg install -y alsa-utils
+    pkg install -y zip
     ;;
 
 2)
     echo "Installing KDE..."
     pkg install -y xorg
     pkg install -y  kde plasma5
+    pkg install -y alsa-utils
+    pkg install -y zip
     ;;
 
 3)
@@ -35,6 +39,7 @@ case $choice in
     pkg install -y nitrogen
     pkg install -y pcmanfm
     pkg install -y lxmenu-data
+    pkg install -y zip
     ;;
 
 4)
