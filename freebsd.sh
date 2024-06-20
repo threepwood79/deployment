@@ -23,9 +23,10 @@ case $choice in
 2)
     echo "Installing KDE..."
     # Configure rc.conf
-    sysrc kdm4_enable="YES"
+    sysrc sddm_enable="YES"
     pkg install -y xorg
     pkg install -y  kde
+    pkg install -y  sddm
     pkg install -y alsa-utils
     pkg install -y zip
     ;;
