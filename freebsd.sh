@@ -34,7 +34,7 @@ case $choice in
 3)
     echo "Installing i3wm..."
     # Configure rc.conf
-    sysrc gdm_enable="YES" gnome_enable="YES"
+    sysrc lightdm_enable="YES"
     pkg install -y xorg
     pkg install -y i3 i3status i3lock dmenu i3-gaps
     pkg install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
