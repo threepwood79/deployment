@@ -64,6 +64,7 @@ read -p "Do you need to install Intel or Nvidia video drivers? [y/N]: " video_ch
 
 case $video_choice in
 [yY])
+    clear
     echo "Installing video drivers..."
     pkg install -y drm-kmod
     pkg install -y nvidia-driver-470
@@ -86,6 +87,7 @@ read -p "Do you need to install additional applications? [y/N]: " app_choice
 
 case $app_choice in
 [yY])
+    clear
     echo "Installing Firefox and Chromium..."
     pkg install -y firefox
     pkg install -y chromium
@@ -105,6 +107,7 @@ read -p "Installation complete. Would you like to reboot now? [y/N]: " reboot_ch
 
 case $reboot_choice in
 [yY])
+    clear
     echo "Rebooting now..."
     reboot
     ;;
