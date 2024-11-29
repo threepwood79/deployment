@@ -25,8 +25,8 @@ case $choice in
     # Configure rc.conf
     sysrc sddm_enable="YES"
     pkg install -y xorg
-    pkg install -y  kde
-    pkg install -y  sddm
+    pkg install -y kde
+    pkg install -y sddm
     pkg install -y alsa-utils
     pkg install -y zip
     ;;
