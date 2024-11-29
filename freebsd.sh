@@ -36,7 +36,11 @@ case $choice in
     # Configure rc.conf
     sysrc lightdm_enable="YES"
     pkg install -y xorg
-    pkg install -y i3 i3status i3lock dmenu i3-gaps
+    pkg install -y i3
+    pkg install -y dmenu
+    pkg install -y i3lock
+    pkg install -y i3status
+    pkg install -y i3-gaps
     pkg install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
     pkg install -y ant-dracula-theme-2.0
     pkg install -y lxappearance
